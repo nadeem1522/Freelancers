@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brick Bodyz Fitness & Gym | Premium Fitness Center in Mumbai</title>
     
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
-    <link rel="shortcut icon" href="logo.png">
+    <link rel="icon" type="image/png" href="fav-logo.png">
+    <link rel="apple-touch-icon" href="fav-logo.png">
+    <link rel="shortcut icon" href="fav-logo.png">
 
     <meta name="description" content="Transform your body at Brick Bodyz Fitness, Goregaon West's premier luxury gym. Elite trainers, high-performance equipment, and cinematic atmosphere.">
     <meta name="keywords" content="Gym in Goregaon West, Brick Bodyz Fitness, Best Gym in Mumbai, Personal Trainer Mumbai">
@@ -137,16 +137,22 @@
         /* Noise Texture */
         .noise { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9990; opacity: 0.03; background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E'); }
 
-        /* Preloader */
-        #preloader { position: fixed; inset: 0; background: #050A14; z-index: 10000; display: flex; justify-content: center; align-items: center; }
-        .loader-text { font-family: 'Anton', sans-serif; font-size: 4rem; color: #FFEA00; animation: pulse 1s infinite alternate; }
-        @keyframes pulse { 0% { opacity: 0.5; } 100% { opacity: 1; } }
+        /* Preloader Styles */
+        #preloader { position: fixed; inset: 0; background: #050A14; z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; }
+        .loader-text { font-family: 'Anton', sans-serif; font-size: 4rem; color: #FFEA00; letter-spacing: 0.1em; }
     </style>
 </head>
 <body class="antialiased font-inter">
 
     <div id="preloader">
-        <div class="loader-text tracking-widest">BRICK BODYZ</div>
+        <div class="text-center">
+            <div class="loader-text mb-2">BRICK BODYZ</div>
+            <div class="text-xs uppercase font-inter tracking-[0.4em] text-gray-500">Forging Elite Bodies</div>
+        </div>
+        <div class="w-64 h-[3px] bg-white/10 rounded-full overflow-hidden relative">
+            <div id="loader-bar" class="absolute top-0 left-0 h-full w-0 bg-brand-yellow rounded-full"></div>
+        </div>
+        <div id="loader-percent" class="font-anton text-sm text-brand-yellow/70 tracking-widest">0%</div>
     </div>
 
     <div class="cursor-dot hidden md:block"></div>
@@ -444,21 +450,6 @@
 
                     <div class="shrink-0 w-full sm:w-[350px] snap-center group relative overflow-hidden rounded-xl bg-brand-navy border border-white/5 transition duration-300 hover:border-brand-yellow/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-yellow/10">
                         <div class="h-80 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1534438097544-e2bc016a695a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-105" alt="Kabir Singh">
-                        </div>
-                        <div class="p-6 relative z-10 bg-brand-navy">
-                            <h3 class="font-anton text-2xl uppercase tracking-wide text-brand-yellow mb-1">Kabir Singh</h3>
-                            <p class="font-inter text-sm text-gray-400 mb-4 uppercase tracking-widest">CrossFit Master</p>
-                            <div class="flex gap-4">
-                                <a href="#" class="w-10 h-10 rounded-full border border-white/20 text-white social-icon-btn">
-                                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="shrink-0 w-full sm:w-[350px] snap-center group relative overflow-hidden rounded-xl bg-brand-navy border border-white/5 transition duration-300 hover:border-brand-yellow/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-yellow/10">
-                        <div class="h-80 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-105" alt="Zara Khan">
                         </div>
                         <div class="p-6 relative z-10 bg-brand-navy">
@@ -647,7 +638,7 @@
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
             <div class="gsap-reveal">
                 <h4 class="text-brand-orange font-inter font-bold tracking-widest uppercase text-sm mb-4">Join The Army</h4>
-                <h2 class="font-anton text-5xl md:text-6xl uppercase mb-8">Start Your <br><span class="text-brand-yellow">Transformation</span></h2>
+                <h2 class="font-anton text-5xl md:text-6xl uppercase mb-8">Know Your Status & <br><span class="text-brand-yellow">Transform</span></h2>
                 
                 <div class="space-y-6 font-inter text-gray-300 mb-10">
                     <div class="flex items-start gap-4">
@@ -671,28 +662,45 @@
                 </div>
             </div>
 
-            <div id="join" class="glass p-10 rounded-2xl border border-brand-yellow/20 relative overflow-hidden gsap-reveal">
+            <div id="join" class="glass p-10 rounded-2xl border border-brand-yellow/20 relative overflow-hidden gsap-reveal min-h-[440px] flex flex-col justify-center">
                 <div class="absolute -top-32 -right-32 w-64 h-64 bg-brand-yellow blur-[100px] opacity-20 rounded-full"></div>
-                <h3 class="font-anton text-3xl uppercase mb-2">Claim Your Free Trial</h3>
-                <p class="font-inter text-sm text-gray-400 mb-8">Fill the form below and our team will contact you instantly.</p>
                 
-                <form class="space-y-5 relative z-10" onsubmit="event.preventDefault(); alert('Request Received! We will contact you shortly.');">
-                    <div>
-                        <input type="text" placeholder="Full Name" required class="w-full bg-black/50 border border-white/10 rounded-lg px-5 py-4 text-white focus:outline-none focus:border-brand-yellow font-inter transition">
+                <div id="bmi-input-container" class="relative z-10 transition-all duration-300">
+                    <h3 class="font-anton text-3xl uppercase mb-2 tracking-wide">Check Your Body Mass Index</h3>
+                    <p class="font-inter text-sm text-gray-400 mb-8">Enter your correct height and weight parameters to evaluate your composition instantly.</p>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <input id="bmi-weight" type="number" min="10" max="300" placeholder="Weight (in kg)" required class="w-full bg-black/50 border border-white/10 rounded-lg px-5 py-4 text-white focus:outline-none focus:border-brand-yellow font-inter transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                        </div>
+                        <div>
+                            <input id="bmi-height" type="number" min="50" max="250" placeholder="Height (in cm)" required class="w-full bg-black/50 border border-white/10 rounded-lg px-5 py-4 text-white focus:outline-none focus:border-brand-yellow font-inter transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                        </div>
+                        <button onclick="calculateFitnessBMI()" class="w-full magnetic-btn bg-brand-yellow text-brand-navy py-4 rounded-lg font-bold uppercase tracking-wider text-sm mt-4 block text-center">Calculate BMI</button>
                     </div>
-                    <div>
-                        <input type="tel" placeholder="Phone Number" required class="w-full bg-black/50 border border-white/10 rounded-lg px-5 py-4 text-white focus:outline-none focus:border-brand-yellow font-inter transition">
+                </div>
+
+                <div id="bmi-result-container" class="relative z-10 hidden text-center transition-all duration-500 transform scale-95 opacity-0">
+                    <div class="w-16 h-16 bg-brand-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-yellow">
+                        <i data-lucide="activity" class="w-8 h-8"></i>
                     </div>
-                    <div>
-                        <select required class="w-full bg-black/50 border border-white/10 rounded-lg px-5 py-4 text-white focus:outline-none focus:border-brand-yellow font-inter transition appearance-none">
-                            <option value="" disabled selected>Select Goal</option>
-                            <option value="weight-loss">Weight Loss</option>
-                            <option value="muscle">Muscle Building</option>
-                            <option value="pt">Personal Training</option>
-                        </select>
+                    <h3 class="font-anton text-3xl uppercase tracking-wider mb-1">Your Diagnostic Blueprint</h3>
+                    <p class="text-xs tracking-widest uppercase text-gray-400 font-inter mb-6">Brick Bodyz Analytics Engine</p>
+                    
+                    <div class="bg-black/40 border border-white/5 rounded-xl p-6 mb-8 max-w-sm mx-auto">
+                        <div id="bmi-score-badge" class="font-anton text-6xl text-brand-yellow mb-2">24.5</div>
+                        <div id="bmi-status-label" class="font-inter font-bold text-lg uppercase tracking-wider text-brand-orange mb-3">Normal Weight</div>
+                        <p id="bmi-feedback-text" class="font-inter text-sm text-gray-400 leading-relaxed">Excellent alignment! Maintain your current foundation or connect with a master trainer vice versa to reach elite status.</p>
                     </div>
-                    <button type="submit" class="w-full magnetic-btn bg-brand-yellow text-brand-navy py-4 rounded-lg font-bold uppercase tracking-wider text-sm mt-4">Send Request</button>
-                </form>
+
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                        <a id="bmi-whatsapp-btn" href="#" target="_blank" class="w-full sm:w-auto bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-3 transition-transform hover:scale-105">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                            Connect via WhatsApp
+                        </a>
+                        <button onclick="resetFitnessBMI()" class="text-xs uppercase font-inter tracking-widest text-gray-500 hover:text-brand-yellow transition py-2">Recalculate</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -744,14 +752,129 @@
     </a>
 
     <script>
-        // Initialize Core Icons (For non-brands like menu, phone, etc)
+        // Initialize Core Icons
         lucide.createIcons();
 
-        // Remove Preloader
-        window.addEventListener('load', () => {
+        // Advanced Preloader Script (3.5 Seconds Delay with Progress Bar)
+        window.addEventListener('DOMContentLoaded', () => {
+            const loaderBar = document.getElementById('loader-bar');
+            const loaderPercent = document.getElementById('loader-percent');
             const preloader = document.getElementById('preloader');
-            gsap.to(preloader, { opacity: 0, duration: 0.8, onComplete: () => { preloader.style.display = 'none'; initAnimations(); }});
+            
+            let progressObj = { value: 0 };
+            
+            const loaderTl = gsap.timeline({
+                onComplete: () => {
+                    gsap.to(preloader, {
+                        yPercent: -100,
+                        duration: 1,
+                        ease: "power4.inOut",
+                        onComplete: () => {
+                            preloader.style.display = 'none';
+                            initAnimations();
+                        }
+                    });
+                }
+            });
+
+            loaderTl.to(progressObj, {
+                value: 100,
+                duration: 3.5,
+                ease: "power1.inOut",
+                onUpdate: () => {
+                    let currentPercentage = Math.floor(progressObj.value);
+                    loaderBar.style.width = `${currentPercentage}%`;
+                    loaderPercent.textContent = `${currentPercentage}%`;
+                }
+            });
+            
+            loaderTl.fromTo(".loader-text", { scale: 1 }, { scale: 1.05, duration: 0.5, ease: "power2.out" }, "-=0.8");
         });
+
+        // Interactive Premium BMI Calculator Logic
+        function calculateFitnessBMI() {
+            const weightInput = document.getElementById('bmi-weight').value;
+            const heightInput = document.getElementById('bmi-height').value;
+            
+            if (!weightInput || !heightInput || weightInput <= 0 || heightInput <= 0) {
+                alert("Please drop valid Weight and Height figures to activate calculation.");
+                return;
+            }
+
+            // Standard metric formula: Weight (kg) / Height (m)^2
+            const heightInMeters = heightInput / 100;
+            const bmiScore = (weightInput / (heightInMeters * heightInMeters)).toFixed(1);
+            
+            let status = "";
+            let feedback = "";
+            
+            if (bmiScore < 18.5) {
+                status = "Underweight";
+                feedback = "Your engine needs more high-quality fuel. Let's design a hyper-caloric structure to construct clean muscle tissue vice versa.";
+            } else if (bmiScore >= 18.5 && bmiScore < 25) {
+                status = "Normal Weight";
+                feedback = "Excellent alignment! Your ratio is perfectly balanced. Let's sculpt premium definition and accelerate structural power vice versa.";
+            } else if (bmiScore >= 25 && bmiScore < 30) {
+                status = "Overweight";
+                feedback = "Slightly above benchmark parameters. We specialize in shifting mass composition into raw athletic performance power vice versa.";
+            } else {
+                status = "Obese";
+                feedback = "High structural overhead detected. Time to ignite optimal metabolic fat-loss programs and reconstruct optimization vice versa.";
+            }
+
+            // Update DOM Elements
+            document.getElementById('bmi-score-badge').textContent = bmiScore;
+            document.getElementById('bmi-status-label').textContent = status;
+            document.getElementById('bmi-feedback-text').textContent = feedback;
+
+            // Generate WhatsApp link text with the exact customer payload string requested
+            const customText = `Hey Brick Bodyz team, I just calculated my body mass composition on your website! My BMI score is ${bmiScore} (${status}). Let's connect vice versa to craft my transformation roadmap.`;
+            const encodedText = encodeURIComponent(customText);
+            document.getElementById('bmi-whatsapp-btn').href = `https://wa.me/919326297184?text=${encodedText}`;
+
+            // GSAP Visual Transition: Hide inputs, pop in the results smoothly
+            gsap.to("#bmi-input-container", {
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.3,
+                onComplete: () => {
+                    document.getElementById('bmi-input-container').classList.add('hidden');
+                    const results = document.getElementById('bmi-result-container');
+                    results.classList.remove('hidden');
+                    
+                    gsap.to("#bmi-result-container", {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                }
+            });
+        }
+
+        function resetFitnessBMI() {
+            // Revert container displays back to input state via GSAP cross-fades
+            gsap.to("#bmi-result-container", {
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.3,
+                onComplete: () => {
+                    document.getElementById('bmi-result-container').classList.add('hidden');
+                    document.getElementById('bmi-weight').value = '';
+                    document.getElementById('bmi-height').value = '';
+                    
+                    const inputs = document.getElementById('bmi-input-container');
+                    inputs.classList.remove('hidden');
+                    
+                    gsap.to("#bmi-input-container", {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
+                }
+            });
+        }
 
         // Custom Cursor Logic
         const cursorDot = document.querySelector('.cursor-dot');
@@ -807,7 +930,7 @@
             }
         });
 
-        // Trainer Slider Logic (Horizontal Scroll Buttons)
+        // Trainer Slider Logic
         const trainerSlider = document.getElementById('trainer-slider');
         const btnPrev = document.getElementById('trainer-prev');
         const btnNext = document.getElementById('trainer-next');
@@ -846,7 +969,6 @@
                 baHandle.style.left = `${percent}%`;
             });
             
-            // Touch support
             baContainer.addEventListener('touchstart', () => isDragging = true);
             window.addEventListener('touchend', () => isDragging = false);
             baContainer.addEventListener('touchmove', (e) => {
@@ -869,7 +991,6 @@
                 const icon = btn.querySelector('i');
                 const isOpen = content.style.maxHeight;
 
-                // Close all others
                 document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
                 document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
                 document.querySelectorAll('.faq-btn').forEach(b => b.classList.remove('text-brand-yellow'));
@@ -886,7 +1007,6 @@
         gsap.registerPlugin(ScrollTrigger);
 
         function initAnimations() {
-            // Hero Animation
             gsap.from(".gsap-hero", {
                 y: 50,
                 opacity: 0,
@@ -895,7 +1015,6 @@
                 ease: "power3.out"
             });
 
-            // Scroll Reveals
             const revealElements = document.querySelectorAll(".gsap-reveal");
             revealElements.forEach((el) => {
                 gsap.from(el, {
@@ -911,7 +1030,6 @@
                 });
             });
 
-            // Counter Animation
             const counters = document.querySelectorAll('.counter');
             counters.forEach(counter => {
                 ScrollTrigger.create({
@@ -930,7 +1048,6 @@
                 });
             });
 
-            // Marquee Animation
             gsap.to(".marquee-text", {
                 xPercent: -100,
                 repeat: -1,
